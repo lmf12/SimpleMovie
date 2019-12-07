@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		E8227BAD239B761700ED9FC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8227BAC239B761700ED9FC7 /* AppDelegate.m */; };
 		E8227BB2239B788900ED9FC7 /* SMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8227BB1239B788900ED9FC7 /* SMViewController.m */; };
 		E8227BB6239B791200ED9FC7 /* SMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8227BB5239B791200ED9FC7 /* SMHomeViewController.m */; };
+		E8990C7F239B8F15004F110B /* MFImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8990C7E239B8F15004F110B /* MFImagePickerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,9 @@
 		E8227BB1239B788900ED9FC7 /* SMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMViewController.m; sourceTree = "<group>"; };
 		E8227BB4239B791200ED9FC7 /* SMHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMHomeViewController.h; sourceTree = "<group>"; };
 		E8227BB5239B791200ED9FC7 /* SMHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMHomeViewController.m; sourceTree = "<group>"; };
+		E8990C7C239B836E004F110B /* SimpleMovie-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleMovie-Prefix.pch"; sourceTree = "<group>"; };
+		E8990C7D239B8F15004F110B /* MFImagePickerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFImagePickerController.h; sourceTree = "<group>"; };
+		E8990C7E239B8F15004F110B /* MFImagePickerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFImagePickerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,6 @@
 				698E16A3B2BFC490826ECAD3 /* Pods-SimpleMovie.debug.xcconfig */,
 				42ACBECC3B9AB8B60B87D42B /* Pods-SimpleMovie.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -111,6 +114,7 @@
 			children = (
 				E8227BAB239B761700ED9FC7 /* AppDelegate.h */,
 				E8227BAC239B761700ED9FC7 /* AppDelegate.m */,
+				E8990C7C239B836E004F110B /* SimpleMovie-Prefix.pch */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -128,6 +132,8 @@
 			children = (
 				E8227BB0239B788900ED9FC7 /* SMViewController.h */,
 				E8227BB1239B788900ED9FC7 /* SMViewController.m */,
+				E8990C7D239B8F15004F110B /* MFImagePickerController.h */,
+				E8990C7E239B8F15004F110B /* MFImagePickerController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -152,6 +158,7 @@
 				E8227B89239B731500ED9FC7 /* Sources */,
 				E8227B8A239B731500ED9FC7 /* Frameworks */,
 				E8227B8B239B731500ED9FC7 /* Resources */,
+				5D17A379975A46887103F1BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,6 +215,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5D17A379975A46887103F1BD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleMovie/Pods-SimpleMovie-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleMovie/Pods-SimpleMovie-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleMovie/Pods-SimpleMovie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9C02143174AD44533DB3382F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,6 +263,7 @@
 			files = (
 				E8227BAD239B761700ED9FC7 /* AppDelegate.m in Sources */,
 				E8227BB6239B791200ED9FC7 /* SMHomeViewController.m in Sources */,
+				E8990C7F239B8F15004F110B /* MFImagePickerController.m in Sources */,
 				E8227BB2239B788900ED9FC7 /* SMViewController.m in Sources */,
 				E8227BA3239B731600ED9FC7 /* main.m in Sources */,
 			);
@@ -383,6 +408,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P79J85545;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SimpleMovie/Support/SimpleMovie-Prefix.pch";
 				INFOPLIST_FILE = SimpleMovie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -402,6 +429,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P79J85545;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SimpleMovie/Support/SimpleMovie-Prefix.pch";
 				INFOPLIST_FILE = SimpleMovie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

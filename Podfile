@@ -5,6 +5,7 @@ target 'SimpleMovie' do
 
   pod 'MFMovieKit'
   pod 'Masonry'
+  pod 'TZImagePickerController'
   pod 'Toast', '~> 4.0.0'
 
 end

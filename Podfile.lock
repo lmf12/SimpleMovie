@@ -2,23 +2,27 @@ PODS:
   - Masonry (1.1.0)
   - MFMovieKit (0.1.0)
   - Toast (4.0.0)
+  - TZImagePickerController (3.2.8)
 
 DEPENDENCIES:
   - Masonry
   - MFMovieKit
   - Toast (~> 4.0.0)
+  - TZImagePickerController
 
 SPEC REPOS:
   trunk:
     - Masonry
     - MFMovieKit
     - Toast
+    - TZImagePickerController
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MFMovieKit: b384674d0c4ea205d0f0e9a44f37bdcf1b6ba4be
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  TZImagePickerController: 4b0a5d3abe6351b6c9ec52c7be0fa9a5bbca23f6
 
-PODFILE CHECKSUM: 8ded082bde4495e20819670700ca2f18abf8c46e
+PODFILE CHECKSUM: 838249e01e0f412ce04f0bad2ab2650d3d87a9c7
 
 COCOAPODS: 1.8.4

@@ -14,8 +14,23 @@
 
 @implementation SMViewController
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.modalPresentationStyle = UIModalPresentationFullScreen;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationController.navigationBarHidden = YES;
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 @end
