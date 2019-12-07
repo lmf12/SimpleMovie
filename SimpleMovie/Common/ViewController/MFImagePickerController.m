@@ -17,6 +17,7 @@
         self.allowPickingImage = NO;
         self.allowTakePicture = NO;
         self.allowTakeVideo = NO;
+        self.autoDismiss = NO;
         self.modalPresentationStyle = UIModalPresentationFullScreen;
     }
     return self;

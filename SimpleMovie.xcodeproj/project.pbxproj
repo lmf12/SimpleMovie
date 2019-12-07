@@ -16,6 +16,8 @@
 		E8227BB2239B788900ED9FC7 /* SMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8227BB1239B788900ED9FC7 /* SMViewController.m */; };
 		E8227BB6239B791200ED9FC7 /* SMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8227BB5239B791200ED9FC7 /* SMHomeViewController.m */; };
 		E8990C7F239B8F15004F110B /* MFImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8990C7E239B8F15004F110B /* MFImagePickerController.m */; };
+		E8990C84239B9989004F110B /* SMMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8990C83239B9989004F110B /* SMMovieController.m */; };
+		E8C77DD0239BA20200E750CD /* SMMovieController+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C77DCF239BA20200E750CD /* SMMovieController+UI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,13 @@
 		E8990C7C239B836E004F110B /* SimpleMovie-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleMovie-Prefix.pch"; sourceTree = "<group>"; };
 		E8990C7D239B8F15004F110B /* MFImagePickerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFImagePickerController.h; sourceTree = "<group>"; };
 		E8990C7E239B8F15004F110B /* MFImagePickerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFImagePickerController.m; sourceTree = "<group>"; };
+		E8990C82239B9989004F110B /* SMMovieController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMMovieController.h; sourceTree = "<group>"; };
+		E8990C83239B9989004F110B /* SMMovieController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMMovieController.m; sourceTree = "<group>"; };
+		E8990C91239B9E15004F110B /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
+		E8990C92239B9E15004F110B /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
+		E8C77DCD239BA16600E750CD /* SMMovieController+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMMovieController+Private.h"; sourceTree = "<group>"; };
+		E8C77DCE239BA20200E750CD /* SMMovieController+UI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMMovieController+UI.h"; sourceTree = "<group>"; };
+		E8C77DCF239BA20200E750CD /* SMMovieController+UI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SMMovieController+UI.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +100,7 @@
 			children = (
 				E8227BAE239B786D00ED9FC7 /* Common */,
 				E8227BA9239B760D00ED9FC7 /* Home */,
+				E8990C80239B9923004F110B /* Movie */,
 				E8227BAA239B761700ED9FC7 /* Support */,
 				E8227B9C239B731600ED9FC7 /* Assets.xcassets */,
 				E8227B99239B731500ED9FC7 /* Main.storyboard */,
@@ -122,6 +132,7 @@
 		E8227BAE239B786D00ED9FC7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E8990C90239B9E15004F110B /* Define */,
 				E8227BAF239B786D00ED9FC7 /* ViewController */,
 			);
 			path = Common;
@@ -145,6 +156,35 @@
 				E8227BB5239B791200ED9FC7 /* SMHomeViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E8990C80239B9923004F110B /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				E8990C81239B9966004F110B /* ViewController */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		E8990C81239B9966004F110B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E8990C82239B9989004F110B /* SMMovieController.h */,
+				E8990C83239B9989004F110B /* SMMovieController.m */,
+				E8C77DCD239BA16600E750CD /* SMMovieController+Private.h */,
+				E8C77DCE239BA20200E750CD /* SMMovieController+UI.h */,
+				E8C77DCF239BA20200E750CD /* SMMovieController+UI.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E8990C90239B9E15004F110B /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				E8990C91239B9E15004F110B /* metamacros.h */,
+				E8990C92239B9E15004F110B /* EXTScope.h */,
+			);
+			path = Define;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8C77DD0239BA20200E750CD /* SMMovieController+UI.m in Sources */,
 				E8227BAD239B761700ED9FC7 /* AppDelegate.m in Sources */,
 				E8227BB6239B791200ED9FC7 /* SMHomeViewController.m in Sources */,
 				E8990C7F239B8F15004F110B /* MFImagePickerController.m in Sources */,
 				E8227BB2239B788900ED9FC7 /* SMViewController.m in Sources */,
+				E8990C84239B9989004F110B /* SMMovieController.m in Sources */,
 				E8227BA3239B731600ED9FC7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
