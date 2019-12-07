@@ -6,6 +6,8 @@
 //  Copyright © 2019 Lyman Li. All rights reserved.
 //
 
+#import "MFMovieKit.h"
+
 #import "SMMovieController+Private.h"
 
 #import "SMMovieController.h"
@@ -28,7 +30,7 @@
 }
 
 - (void)setupPlayer {
-    self.player = [[AVPlayer alloc] initWithPlayerItem:self.playerItem];
+    self.player = [[AVPlayer alloc] initWithPlayerItem:[self createPlayerItem]];
     AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
     playerLayer.backgroundColor = [UIColor blackColor].CGColor;
     CGSize layerSize = [self playerViewSize];
@@ -36,6 +38,20 @@
     [self.playerView.layer addSublayer:playerLayer];
     
     [self.player play];
+}
+
+- (AVPlayerItem *)createPlayerItem {
+    NSMutableArray *clips = [[NSMutableArray alloc] init];
+    for (AVAsset *asset in self.assets) {
+        MFClip *clip = [MFClip clipWithAsset:asset];
+        [clips addObject:clip];
+    }
+    MFTimeLine *timeLine = [[MFTimeLine alloc] init];
+    timeLine.clips = @[[clips copy]];
+    
+    MFCompositionBuilder *builder = [MFCompositionBuilder compositionBuilderWithTimeLine:timeLine];
+    MFComposition *composition = [builder bulidComposition];
+    return [composition createPlayerItem];
 }
 
 #pragma mark - Action

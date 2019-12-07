@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2CC2FED435240A193CC37ECC /* libPods-SimpleMovie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F00F311C6CA979FA2418C1E /* libPods-SimpleMovie.a */; };
+		E81CA909239BD37C0008B3F8 /* TZImageManager+AVAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = E81CA908239BD37C0008B3F8 /* TZImageManager+AVAsset.m */; };
 		E8227B9B239B731500ED9FC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8227B99239B731500ED9FC7 /* Main.storyboard */; };
 		E8227B9D239B731600ED9FC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8227B9C239B731600ED9FC7 /* Assets.xcassets */; };
 		E8227BA0239B731600ED9FC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8227B9E239B731600ED9FC7 /* LaunchScreen.storyboard */; };
@@ -24,6 +25,8 @@
 		42ACBECC3B9AB8B60B87D42B /* Pods-SimpleMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMovie.release.xcconfig"; path = "Target Support Files/Pods-SimpleMovie/Pods-SimpleMovie.release.xcconfig"; sourceTree = "<group>"; };
 		698E16A3B2BFC490826ECAD3 /* Pods-SimpleMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMovie.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMovie/Pods-SimpleMovie.debug.xcconfig"; sourceTree = "<group>"; };
 		7F00F311C6CA979FA2418C1E /* libPods-SimpleMovie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SimpleMovie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E81CA907239BD37C0008B3F8 /* TZImageManager+AVAsset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TZImageManager+AVAsset.h"; sourceTree = "<group>"; };
+		E81CA908239BD37C0008B3F8 /* TZImageManager+AVAsset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TZImageManager+AVAsset.m"; sourceTree = "<group>"; };
 		E8227B8D239B731500ED9FC7 /* SimpleMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8227B9A239B731500ED9FC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8227B9C239B731600ED9FC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +78,15 @@
 				42ACBECC3B9AB8B60B87D42B /* Pods-SimpleMovie.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E81CA906239BD3520008B3F8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E81CA907239BD37C0008B3F8 /* TZImageManager+AVAsset.h */,
+				E81CA908239BD37C0008B3F8 /* TZImageManager+AVAsset.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		E8227B84239B731500ED9FC7 = {
@@ -132,6 +144,7 @@
 		E8227BAE239B786D00ED9FC7 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E81CA906239BD3520008B3F8 /* Category */,
 				E8990C90239B9E15004F110B /* Define */,
 				E8227BAF239B786D00ED9FC7 /* ViewController */,
 			);
@@ -302,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8C77DD0239BA20200E750CD /* SMMovieController+UI.m in Sources */,
+				E81CA909239BD37C0008B3F8 /* TZImageManager+AVAsset.m in Sources */,
 				E8227BAD239B761700ED9FC7 /* AppDelegate.m in Sources */,
 				E8227BB6239B791200ED9FC7 /* SMHomeViewController.m in Sources */,
 				E8990C7F239B8F15004F110B /* MFImagePickerController.m in Sources */,

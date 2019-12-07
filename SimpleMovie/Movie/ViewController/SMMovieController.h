@@ -12,6 +12,6 @@
 
 @interface SMMovieController : SMViewController
 
-@property (nonatomic, strong) AVPlayerItem *playerItem;
+@property (nonatomic, copy) NSArray<AVAsset *> *assets;
 
 @end

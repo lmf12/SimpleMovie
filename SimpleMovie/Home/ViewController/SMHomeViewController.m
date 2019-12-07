@@ -6,7 +6,7 @@
 //  Copyright © 2019 Lyman Li. All rights reserved.
 //
 
-#import "TZImageManager.h"
+#import "TZImageManager+AVAsset.h"
 
 #import "SMMovieController.h"
 #import "MFImagePickerController.h"
@@ -48,9 +48,9 @@
 }
 
 /// 跳转到编辑页面
-- (void)forwardToMovieControllerWithPlayerItem:(AVPlayerItem *)playerItem {
+- (void)forwardToMovieControllerWithAssets:(NSArray<AVAsset *> *)assets {
     SMMovieController *movieController = [[SMMovieController alloc] init];
-    movieController.playerItem = playerItem;
+    movieController.assets = assets;
     [self presentViewController:movieController animated:YES completion:NULL];
 }
 
@@ -67,12 +67,12 @@
         didFinishPickingVideo:(UIImage *)coverImage
                  sourceAssets:(PHAsset *)asset {
     @weakify(self);
-    [[TZImageManager manager] getVideoWithAsset:asset
-                                     completion:^(AVPlayerItem *playerItem, NSDictionary *info) {
+    [[TZImageManager manager] getAVAssetWithAsset:asset
+                                       completion:^(AVAsset *asset, AVAudioMix *audioMix, NSDictionary *info) {
         @strongify(self);
         dispatch_async(dispatch_get_main_queue(), ^{
             [picker dismissViewControllerAnimated:NO completion:NULL];
-            [self forwardToMovieControllerWithPlayerItem:playerItem];
+            [self forwardToMovieControllerWithAssets:@[asset, asset, asset]];
         });
     }];
 }
