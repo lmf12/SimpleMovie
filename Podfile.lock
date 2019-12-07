@@ -1,0 +1,24 @@
+PODS:
+  - Masonry (1.1.0)
+  - MFMovieKit (0.1.0)
+  - Toast (4.0.0)
+
+DEPENDENCIES:
+  - Masonry
+  - MFMovieKit
+  - Toast (~> 4.0.0)
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+    - MFMovieKit
+    - Toast
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MFMovieKit: b384674d0c4ea205d0f0e9a44f37bdcf1b6ba4be
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+
+PODFILE CHECKSUM: 8ded082bde4495e20819670700ca2f18abf8c46e
+
+COCOAPODS: 1.8.4
