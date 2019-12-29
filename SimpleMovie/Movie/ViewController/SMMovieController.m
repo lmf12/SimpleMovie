@@ -41,17 +41,36 @@
 }
 
 - (AVPlayerItem *)createPlayerItem {
-    NSMutableArray *clips = [[NSMutableArray alloc] init];
+    CMTime cursorTime = kCMTimeZero;
+    CMTime transitionTime = CMTimeMakeWithSeconds(1.0, 600);
+    
+    NSMutableArray *firstTrack = [[NSMutableArray alloc] init];
+    NSMutableArray *secondTrack = [[NSMutableArray alloc] init];
+    
+    NSMutableArray *transitions = [[NSMutableArray alloc] init];
+    
+    NSInteger trackIndex = 0;
     for (AVAsset *asset in self.assets) {
+        NSMutableArray *track = trackIndex == 0 ? firstTrack : secondTrack;
         MFClip *clip = [MFClip clipWithAsset:asset];
-        [clips addObject:clip];
+        clip.startTime = cursorTime;
+        [track addObject:clip];
+        CMTime endTime = CMTimeAdd(cursorTime, clip.timeRange.duration);
+        cursorTime = CMTimeSubtract(endTime, transitionTime);
+        trackIndex = (trackIndex + 1) % 2;
     }
     MFTimeLine *timeLine = [[MFTimeLine alloc] init];
-    timeLine.clips = @[[clips copy]];
+    timeLine.clips = @[[firstTrack copy], [secondTrack copy]];
+    timeLine.videoTransitions = transitions;
     
     MFCompositionBuilder *builder = [MFCompositionBuilder compositionBuilderWithTimeLine:timeLine];
     MFComposition *composition = [builder bulidComposition];
-    return [composition createPlayerItem];
+    
+    AVVideoComposition *videoComposition = [builder bulidVideoComposition];
+    AVPlayerItem *playerItem = [composition createPlayerItem];
+    playerItem.videoComposition = videoComposition;
+    
+    return playerItem;
 }
 
 #pragma mark - Action
